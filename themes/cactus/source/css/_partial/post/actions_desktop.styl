@@ -1,9 +1,4 @@
 #header-post
-  position: fixed
-  top: 2rem
-  right: 0
-  display: inline-block
-  float: right
 
   a
     background: none
@@ -63,15 +58,15 @@
     color: $color-accent-1
 
   #menu
-    visibility: hidden
-    margin-right: 2rem
+    float: right
 
   #nav
     color: $color-accent-1
     letter-spacing: .01em
     font-weight: 200
     font-style: normal
-    font-size: .8rem
+    font-size: 1rem
+    display: block
 
     ul
       line-height: 15px
@@ -84,7 +79,7 @@
         underline(5px, $color-accent-1)
 
       li
-        border-right: 1px dotted $color-accent-1
+        border-right: 2px dotted $color-accent-1
 
       li:last-child
         margin-right: 0
@@ -94,11 +89,10 @@
           margin-right: 0
 
   #actions
-    float: right
-    margin-top: 2rem
-    margin-right: 2rem
-    width: 100%
+    margin-top: 0.5rem
     text-align: right
+    position: relative
+    display: block
 
     ul
       display: block
@@ -106,16 +100,17 @@
     .info
       display: block
       font-style: italic
+      position: absolute
+      right: 0
+      opacity: 0.7
+      font-size: 0.8rem
 
   #share
-    clear: both
-    padding-top: 1rem
-    padding-right: 2rem
-    text-align: right
+    display: inline-block
 
     li
-      display: block
-      margin: 0
+      display: inline-block
+      margin-right: 5px
 
   #toc
     float: right
@@ -168,8 +163,8 @@
     #menu-icon
       display: none
 
-    #actions
-      display: none
+    // #actions
+    //   display: none
 
 @media screen and (max-width: 1199px)
   #header-post
@@ -183,18 +178,3 @@
 
     #top-icon-tablet
       display: none !important
-
-@media screen and (min-width: 1199px)
-  #header-post
-    #actions
-      width: auto
-
-      ul
-        display: inline-block
-        float: right
-
-      .info
-        display: inline
-        float: left
-        margin-right: 2rem
-        font-style: italic
