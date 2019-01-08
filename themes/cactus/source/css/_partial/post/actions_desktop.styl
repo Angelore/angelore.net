@@ -113,14 +113,14 @@
       margin-right: 5px
 
   #toc
-    float: right
-    clear: both
     overflow: auto
     margin-top: 1rem
     padding-right: 2rem
     max-width: 20em
     max-height: calc(95vh - 7rem)
-    text-align: right
+    text-align: left
+    position: fixed
+    left: calc(50% + 30rem);
 
     a:hover
       color: $color-link
@@ -166,7 +166,7 @@
     // #actions
     //   display: none
 
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1279px)
   #header-post
     #toc
       display: none
