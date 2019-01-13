@@ -1,5 +1,5 @@
 <div id="header-post">
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="top-icon" href="#" onclick="topIconOnclick()" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -33,3 +33,11 @@
     </div>
   </span>
 </div>
+
+<script>
+  function topIconOnclick() {
+    // This is needed to remove a bounce which appears because of an issue with the animate method
+    $('#top-icon')[0].IsScrolling = true;
+    $('html, body').animate({ scrollTop: 0 }, 'fast', function(){$('#top-icon')[0].IsScrolling = false;});
+  }
+</script>
