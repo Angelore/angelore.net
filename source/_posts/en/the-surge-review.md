@@ -16,7 +16,8 @@ Also some points that I would like to get out of the way quickly:
 - The game is more than a year old at this point. I have played it only recently
 - I am not a diehard Souls fan. I have not played the majority of the games in the series (as a matter of fact, I have only played DS3, the rest I have experienced mostly through watching speedruns)
 - I do consider myself a decent player (I've beaten Midir and only ragequit once :V)
-- This review was written at 19th of February, and was collecting dust on my drive. I decided that it deserves better
+- This review was written at 19th of February, 2018, and was collecting dust on my drive (yep). I decided that it deserves better
+<!-- more -->
 
 ### A brave new world
 The Surge is Deck13's second attempt at a so called souls-like game. The first one, Lords of the Fallen, didn't turn out very good, which became an issue for the successor PR-wise. The discussions of the game mostly stopped dead in the tracks when anybody brought up LotF. If you think about it though, it's a bit counter-intuitive, since people tend to learn from their mistakes. And also there is the fact that nobody would risk publishing this game if it at least didn't look *somehow* promising. But when did logic stop anyone anyway?  
