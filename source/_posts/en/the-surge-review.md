@@ -7,7 +7,7 @@ tags:
 - reviews
 ---
 
-<p><img src="/images/the-surge-review/logo_black.png" alt="The Surge logo" style="max-height: 100px;"/></p>
+<p><img id="postHeaderImage" src="/images/the-surge-review/logo_black.png" alt="The Surge logo" style="max-height: 100px;"/></p>
 
 ### Intro
 [The Surge](https://en.wikipedia.org/wiki/The_Surge_%28video_game%29) is an action RPG that came out in May, 2017. It is considered by many to be a "side-grade" to Dark Souls series, with the main comparison, of course, being Dark Souls 3. I will also make some comparisons to DS3 here. Firstly, I will need a reference point for some of the things in this review, and also for the simple fact that I got The Surge only because I craved for a sci-fi Dark Souls. Oh well.  
@@ -16,7 +16,7 @@ Also some points that I would like to get out of the way quickly:
 - The game is more than a year old at this point. I have played it only recently
 - I am not a diehard Souls fan. I have not played the majority of the games in the series (as a matter of fact, I have only played DS3, the rest I have experienced mostly through watching speedruns)
 - I do consider myself a decent player (I've beaten Midir and only ragequit once :V)
-- This review was written at 19th of February, 2018, and was collecting dust on my drive (yep). I decided that it deserves better
+- This review was written on 19th of February, 2018, and was collecting dust on my drive (yep). I decided that it deserves better
 <!-- more -->
 
 ### A brave new world
