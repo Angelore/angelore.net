@@ -3,21 +3,21 @@
   <span id="menu">
     <span id="nav">
       <ul>
-        <% for (var i in theme.nav) { %> 
+        <%_ for (var i in theme.nav) { _%>
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
-        <% } %>
+        <%_ } _%>
       </ul>
     </span>
     <span id="actions">
       <ul>
-        <% if (page.prev) { %>
+        <%_ if (page.prev) { _%>
         <li><a class="icon" href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        <% } %>
-        <% if (page.next) { %>
+        <%_ } _%>
+        <%_ if (page.next) { _%>
         <li><a class="icon" href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        <% } %>
+        <%_ } _%>
         <div id="share" style="display: none">
-          <%- partial('_partial/post/share', { icon_class_name: '' }) %>
+          <%- partial('_partial/post/share', { icon_class_name: '' }) _%>
         </div>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
@@ -25,7 +25,7 @@
       <span id="i-next" class="info" style="display:none;"><%= __('post.desktop.next') %></span>
       <span id="i-top" class="info" style="display:none;"><%= __('post.desktop.back_to_top') %></span>
       <span id="i-share" class="info" style="display:none;"><%= __('post.desktop.share') %></span>
-      <div style="height: 1.45rem;"/><!-- Hack: reserver space for the info elemets. Previously done with br, not stylable -->
+      <div style="height: 1.45rem;"></div><!-- Hack: reserved space for the info elemets. Previously done with br, not stylable -->
     </span>
     <div id="toc">
       <!-- Hack, the last item in the list is placed outside the ol element. Need to fix somehow I guess -->
