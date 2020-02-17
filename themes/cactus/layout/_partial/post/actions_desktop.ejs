@@ -11,15 +11,14 @@
     <span id="actions">
       <ul>
         <%_ if (page.prev) { _%>
-        <li><a class="icon" href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         <%_ } _%>
         <%_ if (page.next) { _%>
-        <li><a class="icon" href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         <%_ } _%>
-        <div id="share" style="display: none">
+        <div id="share" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();">
           <%- partial('_partial/post/share', { icon_class_name: '' }) _%>
         </div>
-        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;"><%= __('post.desktop.previous') %></span>
       <span id="i-next" class="info" style="display:none;"><%= __('post.desktop.next') %></span>
