@@ -77,8 +77,12 @@ pagination_dir: page
 theme: cactus
 theme_config:
   colorscheme: white
-  projects_url: https://github.com/angelore
   page_width: 60
+  nav:
+    home: /
+    about: /about/
+    articles: /archives/
+    projects: https://github.com/angelore
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
