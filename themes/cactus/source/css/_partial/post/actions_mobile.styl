@@ -87,35 +87,40 @@
     background: $color-footer-mobile-2
     text-align: left
 
-    ol
+    ol.toc
       margin: 0
       padding-left: 20px
       list-style-type: none
 
       li
         line-height: 30px
+    
+    ol.toc-child
+      padding-left: 16px
+      list-style-type: square
 
     a:hover
       color: $color-link
 
-    .toc-level-1 > .toc-link
-      display: none
-
-    .toc-level-2
+    .toc-level-1
       color: $color-text
-      font-size: .8rem
+      font-size: 1rem
 
       &:before
         color: $color-accent-1
         content: "#"
 
+    .toc-level-2
+      color: $color-text
+      font-size: .8rem
+
     .toc-level-3
       color: $color-meta
       font-size: .7rem
-      line-height: 15px
 
     .toc-level-4
-      display: none
+      color: darken($color-meta, 20%)
+      font-size: .6rem
 
     .toc-level-5
       display: none

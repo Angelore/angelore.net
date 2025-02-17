@@ -1,4 +1,13 @@
 #header-post
+  // position: fixed
+  // top: 2rem
+  // right: 0
+  // display: inline-block
+  // float: right
+  // z-index: 100
+  display: flex;
+  justify-content: flex-end;
+
   a
     background: none
     color: inherit
@@ -29,10 +38,9 @@
 
   #top-icon
     position: fixed
-    right: 2rem
+    //left: "calc(50% + %s / 2)" % $page-width
+    right: "calc(50% - %s / 2 - 2rem)" % $page-width
     bottom: 2rem
-    margin-right: 2rem
-    margin-left: 15px
 
     &:hover
       color: $color-accent-1
@@ -41,7 +49,7 @@
     color: $color-accent-1
 
   #menu
-    float: right
+    margin-top: 0.5rem;
 
   #nav
     color: $color-accent-1
@@ -56,7 +64,7 @@
 
       a
         margin-right: 15px
-        color: color-accent-1
+        color: $color-accent-1
 
       a:hover
         underline(5px, $color-accent-1)
@@ -74,19 +82,28 @@
   #actions
     margin-top: 0.5rem
     text-align: right
-    position: relative
     display: block
+    position: relative
 
     ul
       display: block
+      line-height: 1rem
 
     .info
-      display: block
+      text-align: center
+      text-wrap: nowrap
+      font-size: 0.75rem
       font-style: italic
+      width: auto
+      background-color: alpha($color-accent-3, 0.2)
+      color: $color-text
+      padding: 5px 10px
+      border-radius: 6px
       position: absolute
-      right: 0
-      opacity: 0.7
-      font-size: 0.8rem
+      top: calc(1rem + 10px)
+      right: 0px
+      margin-left: 0px
+      z-index: 1
 
   #share
     display: inline-block
@@ -98,26 +115,35 @@
   #toc
     overflow: auto
     margin-top: 1rem
-    padding-right: 2rem
+    padding-right: 1rem
     max-width: 20em
     max-height: calc(95vh - 7rem)
     text-align: left
     position: fixed
-    left: calc(50% + 30rem);
+    left: "calc(50% + %s / 2)" % $page-width
+    top: 6rem
+
+    ol.toc
+      padding-left: 10px
+    
+    ol.toc-child
+      padding-left: 16px
+      list-style-type: square
 
     a:hover
       color: $color-link
 
-    .toc-level-1 > .toc-link
-      display: none
-
-    .toc-level-2
+    .toc-level-1
       color: $color-text
-      font-size: .8rem
+      font-size: 1rem
 
       &:before
         color: $color-accent-1
         content: "#"
+
+    .toc-level-2
+      color: $color-text
+      font-size: .8rem
 
     .toc-level-3
       color: $color-meta
@@ -125,7 +151,7 @@
 
     .toc-level-4
       color: darken($color-meta, 20%)
-      font-size: .4rem
+      font-size: .6rem
 
     .toc-level-5
       display: none
@@ -140,18 +166,32 @@
 @media screen and (max-width: 500px)
   #header-post
     display: none
+  
+  .content
+    margin-top: 2rem
 
-@media screen and (max-width: 900px)
+// @media screen and (max-width: 900px)
+//   #header-post
+//     #actions
+//       display: none
+
+@media screen and (max-width: 1199px)
   #header-post
-    #menu-icon
+    #toc, #top-icon
       display: none
 
-    // #actions
-    //   display: none
-
-@media screen and (max-width: 1279px)
+@media screen and (min-width: 900px)
   #header-post
-    #toc
-      display: none
-    #top-icon
+    #top-icon-tablet
       display: none !important
+
+// @media screen and (min-width: 1199px)
+//   #header-post
+//     #actions
+//       width: auto
+
+@media print 
+  #header-post
+    display: none
+  #footer-post-container
+    display: none

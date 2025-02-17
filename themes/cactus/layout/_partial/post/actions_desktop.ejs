@@ -1,20 +1,20 @@
 <div id="header-post">
-  <a id="top-icon" href="#" onclick="topIconOnclick()" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
+  <a id="top-icon" href="#" aria-label="<%- __('icons.top') %>" onclick="topIconOnclick()" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <div id="menu">
+    <div id="nav">
       <ul>
         <%_ for (var i in theme.nav) { _%>
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
         <%_ } _%>
       </ul>
-    </span>
-    <span id="actions">
+    </div>
+    <div id="actions">
       <ul>
         <%_ if (page.prev) { _%>
-        <li><a class="icon" href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="<%- __('post.desktop.previous') %>" href="<%- url_for(page.prev.path) %>"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         <%_ } _%>
         <%_ if (page.next) { _%>
-        <li><a class="icon" href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="<%- __('post.desktop.next') %>" href="<%- url_for(page.next.path) %>"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         <%_ } _%>
         <div id="share" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();">
           <%- partial('_partial/post/share', { icon_class_name: '' }) _%>
@@ -24,13 +24,16 @@
       <span id="i-next" class="info" style="display:none;"><%= __('post.desktop.next') %></span>
       <span id="i-top" class="info" style="display:none;"><%= __('post.desktop.back_to_top') %></span>
       <span id="i-share" class="info" style="display:none;"><%= __('post.desktop.share') %></span>
-      <div style="height: 1.45rem;"></div><!-- Hack: reserved space for the info elemets. Previously done with br, not stylable -->
-    </span>
-    <div id="toc">
-      <!-- Hack, the last item in the list is placed outside the ol element. Need to fix somehow I guess -->
-      <%- toc(page.content, { list_number: false, max_depth: 4 }) %>
+      <div style="height: 1.45rem;"></div>
     </div>
-  </span>
+  </div>
+  <!-- Hack, the last item in the list is placed outside the ol element. Need to fix somehow I guess -->
+  <% let tocHTML = toc(page.content, { list_number: false, max_depth: 4 }) %>
+  <% if (tocHTML !== '') { %>
+    <div id="toc">
+      <%- tocHTML %>
+    </div>
+  <% } %>
 </div>
 
 <script>
