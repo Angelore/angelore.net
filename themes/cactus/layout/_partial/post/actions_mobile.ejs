@@ -1,6 +1,6 @@
 <div id="footer-post-container">
-  <div id="footer-post">
-    <div id="nav-footer" style="display: none">
+  <div id="footer-post" style="display: none">
+    <div id="nav-footer">
       <ul>
         <% for (var i in theme.nav) { %>
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
@@ -10,18 +10,18 @@
 
     <% let tocHTML = toc(page.content, { list_number: false, max_depth: 4 }) %>
     <% if (tocHTML !== '') { %>
-      <div id="toc-footer" style="display: none">
-        <%- toc(page.content) %>
+      <div id="toc-footer">
+        <%- tocHTML %>
       </div>
     <% } %>
 
-    <div id="share-footer" style="display: none">
+    <div id="share-footer">
       <%- partial('_partial/post/share', { icon_class_name: 'fa-lg' }) %>
     </div>
-
-    <a id="menu-button" href="#" onclick="$('#nav-footer').toggle();$('#toc-footer').toggle();$('#share-footer').toggle();return false;">
-      <i class="fa-solid fa-bars fa-lg icon" aria-hidden="true"></i>
-    </a>
-    <!--<a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> <%= __('post.mobile.back_to_top') %></a> -->
   </div>
+
+  <a id="menu-button" href="#" onclick="$('#footer-post').slideToggle(250);$(this).toggleClass('active');return false;">
+    <i class="fa-solid fa-bars fa-lg icon" aria-hidden="true"></i>
+  </a>
+    <!--<a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> <%= __('post.mobile.back_to_top') %></a> -->
 </div>
