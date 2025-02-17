@@ -15,6 +15,8 @@ gulp.task('lib:clean',function(){
   return deleteAsync([ './source/lib/*' ]);
 })
 
+// DOES NOT WORK CORRECTLY
+// COPIES BROKEN FILES SOMEHOW
 gulp.task('lib:fontAwesome',function(){
   return gulp.src([
     'node_modules/@fortawesome/fontawesome-free/webfonts/*',
