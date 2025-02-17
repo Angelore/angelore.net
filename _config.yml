@@ -86,3 +86,10 @@ theme_config:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+html_prettify:
+  enable: true
+  options:
+    indent_size: 2
+    indent_char: " "
+    max_preserve_newlines: "-1"
