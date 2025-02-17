@@ -1,8 +1,8 @@
-<!-- styles -->
-<% if (page.photos && page.photos.length) { %>
-  <% if (isCdnEnable('justified_gallery_css')) { %>
-    <%- getCdnLink('justified_gallery_css', {preload: true}) %> 
-  <% } else { %> 
+<%# Styles -%>
+<% if (page.photos && page.photos.length) { -%>
+  <% if (isCdnEnable('justified_gallery_css')) { -%>
+    <%- getCdnLink('justified_gallery_css', {preload: true}) -%> 
+  <% } else { -%>
     <link
       rel="preload"
       href="<%- url_for('/lib/justified-gallery/css/justifiedGallery.min.css') %>"
@@ -13,12 +13,12 @@
         rel="stylesheet"
         href="<%- url_for('/lib/justified-gallery/css/justifiedGallery.min.css')  %>"/>
     </noscript>
-  <% } %> 
-<% } %>
+  <% } -%>
+<% } -%>
 
-<% if (isCdnEnable('font_awesome')) { %>
-  <%- getCdnLink('font_awesome', {preload: true}) %>
-<% } else { %> 
+<% if (isCdnEnable('font_awesome')) { -%>
+  <%- getCdnLink('font_awesome', {preload: true}) -%>
+<% } else { -%>
   <link
     rel="preload"
     href="<%- url_for('/lib/font-awesome/css/all.min.css') %>"
@@ -30,4 +30,4 @@
       rel="stylesheet"
       href="<%- url_for('/lib/font-awesome/css/all.min.css') %>"
   /></noscript>
-<% } %>
+<% } -%>
