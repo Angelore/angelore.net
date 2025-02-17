@@ -118,6 +118,9 @@ gulp.task('lib', gulp.series(
   'lib:clean', 'lib:jQuery', 'lib:clipboard', 'lib:fontAwesome',
   'lib:download_mesloFont', 'lib:install_mesloFont', 'lib:vazirFont',
   'lib:justifiedGallery'));
+gulp.task('libx', gulp.series(
+    'lib:clean', 'lib:jQuery', 'lib:clipboard', 'lib:fontAwesome',
+    'lib:justifiedGallery'));
 gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
 gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
 gulp.task('default', gulp.parallel('lint', 'validate'));
