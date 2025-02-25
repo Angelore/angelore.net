@@ -26,6 +26,7 @@ nav:
 # only 'mail' is an exception.
 # You can optionally add a 'label' key to set the title attribute on the link. 
 # 'icon' value will be used as title when 'label' is missing.
+social_links_enabled: false
 social_links:
   -
     icon: github
@@ -74,12 +75,12 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_updated: true
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
 copyright:
-  start_year: 2016
+  start_year: 2018
   end_year:
 
 # Customize the 404 page
@@ -87,7 +88,7 @@ copyright:
 #   - enabled: whether to enable the 404 page (404.html).
 error_404:
   enabled: true
-  title: "404 Page Not Found"
+  title: "404: Not Found"
   description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
 
 

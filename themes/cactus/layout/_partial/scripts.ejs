@@ -1,11 +1,11 @@
-<%- js('js/main') -%>
-
 <%# jquery -%>
 <% if (isCdnEnable('jquery')) {-%>
   <%- getCdnScript('jquery') -%>
 <% } else { -%>
   <%- js('lib/jquery/jquery.min') -%>
 <% } -%>
+
+<%- js('js/main') -%>
 
 <% if (page.photos && page.photos.length) { -%>
   <% if (isCdnEnable('justified_gallery_js')) {-%>
